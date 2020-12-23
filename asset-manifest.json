@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/wins-pool/static/css/main.ff97f5a7.chunk.css",
-    "main.js": "/wins-pool/static/js/main.da60e1b7.chunk.js",
-    "main.js.map": "/wins-pool/static/js/main.da60e1b7.chunk.js.map",
+    "main.css": "/wins-pool/static/css/main.d1449523.chunk.css",
+    "main.js": "/wins-pool/static/js/main.63886661.chunk.js",
+    "main.js.map": "/wins-pool/static/js/main.63886661.chunk.js.map",
     "runtime-main.js": "/wins-pool/static/js/runtime-main.43bb08fd.js",
     "runtime-main.js.map": "/wins-pool/static/js/runtime-main.43bb08fd.js.map",
-    "static/js/2.c45a6339.chunk.js": "/wins-pool/static/js/2.c45a6339.chunk.js",
-    "static/js/2.c45a6339.chunk.js.map": "/wins-pool/static/js/2.c45a6339.chunk.js.map",
+    "static/js/2.81634690.chunk.js": "/wins-pool/static/js/2.81634690.chunk.js",
+    "static/js/2.81634690.chunk.js.map": "/wins-pool/static/js/2.81634690.chunk.js.map",
     "static/js/3.fd0e9cb0.chunk.js": "/wins-pool/static/js/3.fd0e9cb0.chunk.js",
     "static/js/3.fd0e9cb0.chunk.js.map": "/wins-pool/static/js/3.fd0e9cb0.chunk.js.map",
     "index.html": "/wins-pool/index.html",
-    "static/css/main.ff97f5a7.chunk.css.map": "/wins-pool/static/css/main.ff97f5a7.chunk.css.map",
-    "static/js/2.c45a6339.chunk.js.LICENSE.txt": "/wins-pool/static/js/2.c45a6339.chunk.js.LICENSE.txt"
+    "static/css/main.d1449523.chunk.css.map": "/wins-pool/static/css/main.d1449523.chunk.css.map",
+    "static/js/2.81634690.chunk.js.LICENSE.txt": "/wins-pool/static/js/2.81634690.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.43bb08fd.js",
-    "static/js/2.c45a6339.chunk.js",
-    "static/css/main.ff97f5a7.chunk.css",
-    "static/js/main.da60e1b7.chunk.js"
+    "static/js/2.81634690.chunk.js",
+    "static/css/main.d1449523.chunk.css",
+    "static/js/main.63886661.chunk.js"
   ]
 }
