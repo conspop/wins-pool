@@ -48,8 +48,8 @@ const picks = [
 class App extends Component {
   state = {
     standings: '',
-    avgPlayerWins: '',
-    avgTeamWins: ''
+    maxPlayerWins: '',
+    maxTeamWins: ''
   }
   
   componentDidMount() {
@@ -70,7 +70,8 @@ class App extends Component {
 
   assignToPlayers(winsByTeam) {
     const picksAndWins = []
-    let totalWins = 0
+    let maxPlayerWins = 0
+    let maxTeamWins = 0
     picks.forEach(player => {
       const playerObj = {}
       playerObj.total = 0
@@ -78,8 +79,13 @@ class App extends Component {
       player.picks.forEach((pick, idx) => {
         playerObj['pick' + (idx + 1)] = [pick,winsByTeam[pick]]
         playerObj.total += parseInt(winsByTeam[pick])
-        totalWins += parseInt(winsByTeam[pick])
+        if (parseInt(winsByTeam[pick]) > maxTeamWins) {
+          maxTeamWins = parseInt(winsByTeam[pick])
+        }
       })
+      if (playerObj.total > maxPlayerWins) {
+        maxPlayerWins = playerObj.total
+      }
       picksAndWins.push(playerObj)
     })
     const standings = picksAndWins.sort((a, b) => {
@@ -87,25 +93,30 @@ class App extends Component {
     })
     this.setState({
       standings,
-      avgPlayerWins: (totalWins / 10),
-      avgTeamWins: (totalWins / 30)
+      maxTeamWins,
+      maxPlayerWins
     })
   }
   
   render() {
-    const {standings, avgTeamWins, avgPlayerWins} = this.state
+    const {standings, maxPlayerWins, maxTeamWins} = this.state
     let playerList = []
     if (standings) {
-      playerList = standings.map(player => {
+      
         return (
-          <PlayerItem 
-            details={player} 
-            avgTeamWins={avgTeamWins} 
-            avgPlayerWins={avgPlayerWins}
-            key={player.name}
-          />
+          <>
+            <h1>SCHWAB'S WINS POOL</h1>
+            {playerList = standings.map(player => {
+              return (<PlayerItem 
+                details={player} 
+                maxTeamWins={maxTeamWins} 
+                maxPlayerWins={maxPlayerWins}
+                key={player.name}
+              />
+              )
+            })}  
+          </>
         ) 
-      })
     }
     return (
       <div>
@@ -117,34 +128,34 @@ class App extends Component {
 
 class PlayerItem extends Component {
   render() {
-    const {avgPlayerWins, avgTeamWins, details} = this.props
+    const {maxPlayerWins, maxTeamWins, details} = this.props
     const {total, pick1, pick2, pick3, name} = details
     return (  
       <div className='player-item'>
         <div 
           className='total'
-          style={{fontSize: `${total / avgPlayerWins * 2 + .5}rem`}}
+          style={{fontSize: `${10 * total / maxPlayerWins + .1}rem`}}
         >
           <div>{name}</div>
           <div>{total}</div>
         </div>
         <div 
           className='pick1'
-          style={{fontSize: `${pick1[1] / avgTeamWins / 2 + .5}rem`}}
+          style={{fontSize: `${5 * total / maxTeamWins +.1}rem`}}
         >
           <div>{pick1[0]}</div>
           <div>{pick1[1]}</div>
         </div>
         <div 
           className='pick2'
-          style={{fontSize: `${pick2[1] / avgTeamWins / 2 + .5}rem`}}
+          style={{fontSize: `${5 * total / maxTeamWins+.1}rem`}}
         >
           <div>{pick2[0]}</div>
           <div>{pick2[1]}</div>
         </div>
         <div 
           className='pick3'
-          style={{fontSize: `${pick3[1] / avgTeamWins / 2 + .5}rem`}}
+          style={{fontSize: `${5 * total / maxTeamWins+.1}rem`}}
         >
           <div>{pick3[0]}</div>
           <div>{pick3[1]}</div>
