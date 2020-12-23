@@ -134,28 +134,28 @@ class PlayerItem extends Component {
       <div className='player-item'>
         <div 
           className='total'
-          style={{fontSize: `${10 * total / maxPlayerWins + .1}rem`}}
+          style={{fontSize: `${10 * total / maxPlayerWins + 2}rem`}}
         >
           <div>{name}</div>
           <div>{total}</div>
         </div>
         <div 
           className='pick1'
-          style={{fontSize: `${5 * pick1[1] / maxTeamWins +.1}rem`}}
+          style={{fontSize: `${5 * pick1[1] / maxTeamWins + 1}rem`}}
         >
           <div>{pick1[0]}</div>
           <div>{pick1[1]}</div>
         </div>
         <div 
           className='pick2'
-          style={{fontSize: `${5 * pick2[1] / maxTeamWins+.1}rem`}}
+          style={{fontSize: `${5 * pick2[1] / maxTeamWins+ 1}rem`}}
         >
           <div>{pick2[0]}</div>
           <div>{pick2[1]}</div>
         </div>
         <div 
           className='pick3'
-          style={{fontSize: `${5 * pick3[1] / maxTeamWins+.1}rem`}}
+          style={{fontSize: `${5 * pick3[1] / maxTeamWins+ 1}rem`}}
         >
           <div>{pick3[0]}</div>
           <div>{pick3[1]}</div>
