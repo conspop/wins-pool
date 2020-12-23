@@ -1,0 +1,2 @@
+html{font-size:20px}body{font-family:"Anton",sans-serif}.player-item{display:grid;grid-template-columns:2fr repeat(3,1fr);grid-template-areas:"total pick1 pick2 pick3";width:50%;align-items:center;margin:5px auto;padding:15px;text-align:center}.total{grid-area:total}.pick1{grid-area:pick1}.pick2{grid-area:pick2}.pick3{grid-area:pick3}
+/*# sourceMappingURL=main.ff97f5a7.chunk.css.map */
