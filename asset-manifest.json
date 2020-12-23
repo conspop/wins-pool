@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wins-pool/static/css/main.ff97f5a7.chunk.css",
-    "main.js": "/wins-pool/static/js/main.a556c174.chunk.js",
-    "main.js.map": "/wins-pool/static/js/main.a556c174.chunk.js.map",
+    "main.js": "/wins-pool/static/js/main.da60e1b7.chunk.js",
+    "main.js.map": "/wins-pool/static/js/main.da60e1b7.chunk.js.map",
     "runtime-main.js": "/wins-pool/static/js/runtime-main.43bb08fd.js",
     "runtime-main.js.map": "/wins-pool/static/js/runtime-main.43bb08fd.js.map",
     "static/js/2.c45a6339.chunk.js": "/wins-pool/static/js/2.c45a6339.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.43bb08fd.js",
     "static/js/2.c45a6339.chunk.js",
     "static/css/main.ff97f5a7.chunk.css",
-    "static/js/main.a556c174.chunk.js"
+    "static/js/main.da60e1b7.chunk.js"
   ]
 }
