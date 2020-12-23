@@ -53,7 +53,7 @@ class App extends Component {
   }
   
   componentDidMount() {
-    axios.get('http://data.nba.net/prod/v1/current/standings_all_no_sort_keys.json')
+    axios.get('https://data.nba.net/prod/v1/current/standings_all_no_sort_keys.json')
       .then(res => {
         this.organizeStandings(res.data);
       })
